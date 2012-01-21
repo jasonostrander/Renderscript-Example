@@ -30,7 +30,6 @@ public class ExampleView extends RSSurfaceView {
             float y = event.getY()/getHeight();
             Float4 color = new Float4(x, y, 0.5f, 1.0f);
             mScript.set_bgColor(color);
-//            mScript.set_gRotation(event.getX());
             return true;
         }
         return super.onTouchEvent(event);
@@ -43,7 +42,7 @@ public class ExampleView extends RSSurfaceView {
         triangles.addVertex(-150.0f, 75.0f);
         triangles.addVertex(150.0f, 75.0f);
         triangles.addTriangle(0, 1, 2);
-        Mesh smP = triangles.create(true);
-        mScript.set_mesh(smP);
+        Mesh mesh = triangles.create(true);
+        mScript.set_gTriangle(mesh);
     }
 }

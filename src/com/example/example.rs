@@ -7,7 +7,7 @@
 float4 bgColor;
 
 // Triangle mesh
-rs_mesh mesh;
+rs_mesh gTriangle;
 
 // Rotation float
 float gRotation;
@@ -30,7 +30,7 @@ int root() {
     rsgProgramVertexLoadModelMatrix(&matrix);
     
     // draw the triangle mesh
-    rsgDrawMesh(mesh);
+    rsgDrawMesh(gTriangle);
     
     // Animate rotation
     gRotation += 1.0f;
